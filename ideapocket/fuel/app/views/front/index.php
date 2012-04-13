@@ -1,43 +1,53 @@
-<div class="idea">
-<h2>Idea No.1 <a>Like</a></h2>
+<div class="issue">
+<h2>Issue No.1 <a>Like</a></h2>
 <p>You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.</p>
-<dl class="methods">
-    <dt>Method 1 <a>Like</a></dt>
+<dl class="solution">
+    <dt>Solution 1 <a>Like</a></dt>
     <dd>Houston, we have a problem.</dd>
-    <dt>Method 2 <a>Like</a></dt>
+    <dd>
+      <ul>
+        <li>mishizaw: Yeah!</li>
+        <li>mishizaw: +1</li>
+      </ul>
+    </dd>
+    <dt>Solution 2 <a>Like</a></dt>
     <dd>Houston, we have a problem.</dd>
-    <dt>Method 3 <a>Like</a></dt>
+    <dt>Solution 3 <a>Like</a></dt>
     <dd>Houston, we have a problem.</dd>
-    <dt>Method 4 <a>Like</a></dt>
+    <dt>Solution 4 <a>Like</a></dt>
     <dd>Houston, we have a problem.</dd>
-    <dt>Method 5 <a>Like</a></dt>
+    <dt>Solution 5 <a>Like</a></dt>
     <dd>Houston, we have a problem.</dd>
-</ul>
+</dl>
 </div>
 
-<div class="idea">
-<h2>Idea No.2 <a>Like</a></h2>
+<div class="issue">
+<h2>Issue No.2 <a>Like</a></h2>
 <p>You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.</p>
-<ul class="methods">
-    <li>Method 1 <a>Like</a></li>
-    <li>Method 2 <a>Like</a></li>
-    <li>Method 3 <a>Like</a></li>
-    <li>Method 4 <a>Like</a></li>
-    <li>Method 5 <a>Like</a></li>
-    <li>Method 6 <a>Like</a></li>
-</ul>
+<dl class="solution">
+    <dt>Solution 1 <a>Like</a></dt>
+    <dd>Houston, we have a problem.</dd>
+    <dt>Solution 2 <a>Like</a></dt>
+    <dd>Houston, we have a problem.</dd>
+    <dt>Solution 3 <a>Like</a></dt>
+    <dd>Houston, we have a problem.</dd>
+    <dt>Solution 4 <a>Like</a></dt>
+    <dd>Houston, we have a problem.</dd>
+    <dt>Solution 5 <a>Like</a></dt>
+    <dd>Houston, we have a problem.</dd>
+</dl>
 </div>
 
-<div class="idea">
-<h2>Idea No.3 <a>Like</a></h2>
+<div class="issue">
+<h2>Issue No.3 <a>Like</a></h2>
 </div>
 
 <style>
-.idea h2 {
+.issue h2 {
     position: relative;
 }
 
-.idea h2 a {
+.issue h2 a {
     position: absolute;
     right: 0;
     font-size: 12px;
@@ -47,17 +57,17 @@
     padding: 7px;
 }
 
-.methods {
+.solution {
     border-top: 1px solid #ccc;
     list-style: none;
 }
 
-.methods dt {
+.solution dt {
     padding: 5px 0;
     position: relative;
 }
 
-.methods dt a {
+.solution dt a {
     position: absolute;
     right: 0;
     font-size: 12px;
@@ -67,9 +77,19 @@
     padding: 4px;
 }
 
-.methods dd {
+.solution dd {
     margin: 0;
     padding: 0 0 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.solution dd ul {
+    margin: 0;
+    list-style: none;
+}
+
+.solution dd ul li {
+    padding: 2px 0 0;
     border-bottom: 1px solid #ccc;
 }
 </style>
