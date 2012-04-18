@@ -1,48 +1,47 @@
 <div class="issue">
-<h2>Issue No.1 <a>Like</a></h2>
+<h2>Issue No.1</h2>
 <p>You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.</p>
+<p><a href="#">Like</a> - <a href="#">Solution</a></p>
 <dl class="solution">
-    <dt>Solution 1 <a>Like</a></dt>
+    <dt>Solution 1</dt>
     <dd>Houston, we have a problem.</dd>
-    <dd>
-      <ul>
-        <li>mishizaw: Yeah!</li>
-        <li>mishizaw: +1</li>
-      </ul>
-    </dd>
-    <dt>Solution 2 <a>Like</a></dt>
+    <dd><a href="#">Like</a> - <a href="#">Comment</a></p>
+    <dt>Solution 2</dt>
     <dd>Houston, we have a problem.</dd>
-    <dt>Solution 3 <a>Like</a></dt>
+    <dd><a href="#">Like</a> - <a href="#">Comment</a></p>
+    <dt>Solution 3</dt>
     <dd>Houston, we have a problem.</dd>
-    <dt>Solution 4 <a>Like</a></dt>
-    <dd>Houston, we have a problem.</dd>
-    <dt>Solution 5 <a>Like</a></dt>
-    <dd>Houston, we have a problem.</dd>
+    <dd><a href="#">Like</a> - <a href="#">Comment</a></p>
 </dl>
 </div>
 
 <div class="issue">
-<h2>Issue No.2 <a>Like</a></h2>
+<h2>Issue No.2</h2>
 <p>You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.</p>
-<dl class="solution">
-    <dt>Solution 1 <a>Like</a></dt>
-    <dd>Houston, we have a problem.</dd>
-    <dt>Solution 2 <a>Like</a></dt>
-    <dd>Houston, we have a problem.</dd>
-    <dt>Solution 3 <a>Like</a></dt>
-    <dd>Houston, we have a problem.</dd>
-    <dt>Solution 4 <a>Like</a></dt>
-    <dd>Houston, we have a problem.</dd>
-    <dt>Solution 5 <a>Like</a></dt>
-    <dd>Houston, we have a problem.</dd>
-</dl>
+<p><a href="#">Like</a> - <a href="#">Solution</a></p>
+<div>
+<input type="text" placeholder="Solution" class="span4">
+<textarea placeholder="description" class="span4"></textarea>
+<p><button class="btn-mini" type="submit">Submit</button></p>
 </div>
-
-<div class="issue">
-<h2>Issue No.3 <a>Like</a></h2>
+<dl class="solution">
+    <dt>Solution 1</dt>
+    <dd>Houston, we have a problem.</dd>
+    <dd><a href="#">Like</a> - <a href="#">Comment</a></p>
+    <dt>Solution 2</dt>
+    <dd>Houston, we have a problem.</dd>
+    <dd><a href="#">Like</a> - <a href="#">Comment</a></p>
+    <dt>Solution 3</dt>
+    <dd>Houston, we have a problem.</dd>
+    <dd><a href="#">Like</a> - <a href="#">Comment</a></p>
+</dl>
 </div>
 
 <style>
+.issue {
+    padding: 0 0 30px 0;
+}
+
 .issue h2 {
     position: relative;
 }
@@ -58,13 +57,14 @@
 }
 
 .solution {
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     list-style: none;
 }
 
 .solution dt {
-    padding: 5px 0;
+    padding: 8px 0 0 0;
     position: relative;
+    border-top: 1px solid #ccc;
 }
 
 .solution dt a {
@@ -79,8 +79,6 @@
 
 .solution dd {
     margin: 0;
-    padding: 0 0 5px 0;
-    border-bottom: 1px solid #ccc;
 }
 
 .solution dd ul {

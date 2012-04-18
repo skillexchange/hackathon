@@ -15,11 +15,10 @@
         <h1><?php echo $title; ?></h1> 
         <div class="row-fluid">
           <div class="span3">
+            <h2>Submit your issue</h2>
             <form>
-              <label>Issue</label>
-              <input type="text" class="span4">
-              <label>Description</label>
-              <p><textarea class="span4" rows="15"></textarea></p>
+              <input type="text" class="span4" placeholder="Issue">
+              <p><textarea class="span4" rows="15" placeholder="Description"></textarea></p>
               <button type="submit" class="btn btn-success">Submit</button>
             </form>
           </div>
