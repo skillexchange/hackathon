@@ -9,34 +9,29 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="span16">
-				<h1><?php echo $title; ?></h1>
-				<hr>
-<?php if (Session::get_flash('success')): ?>
-				<div class="alert-message success">
-					<p>
-					<?php echo implode('</p><p>', (array) Session::get_flash('success')); ?>
-					</p>
-				</div>
-<?php endif; ?>
-<?php if (Session::get_flash('error')): ?>
-				<div class="alert-message error">
-					<p>
-					<?php echo implode('</p><p>', (array) Session::get_flash('error')); ?>
-					</p>
-				</div>
-<?php endif; ?>
-			</div>
-			<div class="span16">
-<?php echo $content; ?>
-			</div>
-		</div>
-		<footer>
-			<p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>
+  <div>
+    <div class="row-fluid">
+      <div class="span12">
+        <h1><?php echo $title; ?></h1> 
+        <div class="row-fluid">
+          <div class="span3">
+            <form>
+              <label>Issue</label>
+              <input type="text" class="span4">
+              <label>Description</label>
+              <p><textarea class="span4" rows="15"></textarea></p>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+          <div class="span4"><?php echo $content ?></div>
+          <div class="span4"><?php echo $content ?></div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
 			<p>
-				<a href="http://fuelphp.com">FuelPHP</a> is released under the MIT license.<br>
+				Made by &quot;Team Messy&quot;<br>
 				<small>Version: <?php echo e(Fuel::VERSION); ?></small>
 			</p>
 		</footer>
