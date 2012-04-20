@@ -1,0 +1,110 @@
+body {
+    padding: 20px 40px;
+    border-top: 8px solid #000;
+}
+
+a {
+    color: #559700;
+}
+
+a:hover {
+    color: #3c6b00;
+}
+
+header {
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    color: #559700;
+    font-family: 'Signika', sans-serif;
+    font-weight: bold;
+}
+
+header p {
+    color: #888;
+}
+
+ol {
+    margin: 0;
+    list-style: none;
+}
+
+dl dd {
+    margin: 0;
+}
+
+form p {
+    margin: 0;
+}
+
+form textarea {
+    width: 99%;
+}
+
+#aside h2 {
+    font-size: 20px;
+}
+
+#aside #issue-form {
+    padding: 0 0 30px;
+}
+
+.issue {
+    padding: 0 30px 40px 0;
+}
+
+.issue h2 {
+    padding: 0 0 5px 0;
+}
+
+.issue .info {
+    padding: 5px 0 15px;
+}
+
+.solution-form {
+    padding: 10px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+.solution dl {
+    border-bottom: 1px solid #ddd;
+}
+
+.solution dl dt {
+    padding: 9px 0 0 0;
+    border-top: 1px solid #ddd;
+    font-weight: normal;
+}
+
+.solution dl dd {
+    padding: 0 0 1px 0;
+}
+
+.solution .info {
+    padding: 5px 0;
+}
+
+.info {
+    margin: 0;
+    list-style: none;
+}
+
+.info li {
+    padding: 0 7px 0 0;
+    display: inline;
+}
+
+.rank {
+    padding: 0 0 30px;
+}
+
+.rank h3 {
+    margin: 0 0 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.rank ol li {
+    padding: 0 0 8px;
+}
