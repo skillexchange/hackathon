@@ -166,6 +166,10 @@ form textarea {
     background-color: #333;
 }
 
+.breadcrumb {
+    margin: 0 30px 25px 0;
+}
+
 .pagination {
     margin: -20px 0 0;
     padding: 0 0 35px;

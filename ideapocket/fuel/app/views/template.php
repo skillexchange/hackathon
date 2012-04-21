@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1><?php echo $title; ?>*</h1> 
+        <h1>Idea Pocket*</h1> 
         <p>Think, Imagine, Hack!</p>
     </header>
     
@@ -112,7 +112,7 @@
     </div>
     
     <footer>
-        <p>Hacked by Team Messy<br>
+        <p>Hacked by <a href="http://farm8.staticflickr.com/7202/6894346123_5e37708b20_z.jpg">Team Messy</a>.<br>
         <small>Build 20120421</small></p>
     </footer>
 </body>

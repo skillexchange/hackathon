@@ -3,8 +3,8 @@
     <div class="issue-header">
         <h2><?php echo $issue['title']; ?></h2>
         <ul class="count">
-            <li><span><i class="icon-star icon-white"></i></span> <?php echo $issue['like']; ?></li>
             <li><span><i class="icon-inbox icon-white"></i></span> <?php echo count($issue['solutions']); ?></li>
+            <li><span><i class="icon-star icon-white"></i></span> <?php echo $issue['like']; ?></li>
         </ul>
     </div>
     
