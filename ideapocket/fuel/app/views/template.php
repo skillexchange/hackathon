@@ -31,30 +31,35 @@
             </div>
             
             <div class="rank">
-                <h3>人気の課題</h3>
+                <h3>ワイルド！な課題</h3>
                 <ol>
                     <li><span class="badge">123</span> <a href="#">こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは</a></li>
                     <li><span class="badge">112</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
                     <li><span class="badge badge-inverse">98</span> <a href="#">信じることが全てを変えてくれる</a></li>
                     <li><span class="badge badge-inverse">73</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
                     <li><span class="badge badge-inverse">61</span> <a href="#">信じることが全てを変えてくれる</a></li>
-                    <li><span class="badge badge-inverse">48</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
-                    <li><span class="badge badge-inverse">23</span> <a href="#">信じることが全てを変えてくれる</a></li>
-                    <li><span class="badge badge-inverse">17</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
                 </ol>
             </div>
   
             <div class="rank">
-                <h3>人気の解決方法</h3>
+                <h3>ワイルド！な解決方法</h3>
                 <ol>
                     <li><span class="badge badge-inverse">123</span> <a href="#">こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは</a></li>
                     <li><span class="badge badge-inverse">112</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
                     <li><span class="badge badge-inverse">98</span> <a href="#">信じることが全てを変えてくれる</a></li>
                     <li><span class="badge badge-inverse">73</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
                     <li><span class="badge badge-inverse">61</span> <a href="#">信じることが全てを変えてくれる</a></li>
-                    <li><span class="badge badge-inverse">48</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
-                    <li><span class="badge badge-inverse">23</span> <a href="#">信じることが全てを変えてくれる</a></li>
-                    <li><span class="badge badge-inverse">17</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
+                </ol>
+            </div>
+            
+            <div class="rank">
+                <h3>解決方法の多い課題</h3>
+                <ol>
+                    <li><span class="badge badge-inverse">123</span> <a href="#">こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは、こんにちは</a></li>
+                    <li><span class="badge badge-inverse">112</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
+                    <li><span class="badge badge-inverse">98</span> <a href="#">信じることが全てを変えてくれる</a></li>
+                    <li><span class="badge badge-inverse">73</span> <a href="#">未来に先回りして点と点をつなげることはできない</a></li>
+                    <li><span class="badge badge-inverse">61</span> <a href="#">信じることが全てを変えてくれる</a></li>
                 </ol>
             </div>
         </div>

@@ -2,16 +2,17 @@
     <div class="issue-header">
         <h2>Stay foolish, Stay hungry.</h2>
         <ul>
-            <li><span>いいね！</span> 123</li>
+            <li><span>ワイルド！</span> 123</li>
             <li><span>解決方法</span> 9</li>
         </ul>
     </div>
+    
     <p>私が若い頃 "The Whole Earth Catalogue 全地球カタログ" というすごい出版物があって、私と同じ世代ではバイブルのように扱われていました。それはステュアート・ブランドという人が、ここからそれほど遠くないメンローパークで制作したもので、彼の詩的なタッチで彩られていました。１９６０年代の終わり頃はパソコンもDTPもない時代ですから、全てタイプライターとハサミとポラロイドカメラで作られていました。それはまるでグーグルのペーパーバック版のようなもので、グーグルが３５年遡って登場したかのような理想的な本で、すごいツールと壮大な概念に溢れかえっていました。</p>
     <p>スチュアートと彼のチームは ”The Whole Earth Catalogue” を何度か発行しましたが、ひと通りの内容を網羅した時点で最終号を出しました。それは１９７０年代半ばで、私がちょうど君たちの年代だった頃です。最終号の裏表紙は、朝早い田舎道の写真だったのですが、それはヒッチハイクの経験があればどこか見たことある光景でした。写真の下には "Stay hungry, Stay foolish." という言葉が書かれていたのです。</p>
     
     <ul class="info">
         <li><i class="icon-user"></i> <a href="#">takewick</a></li>
-        <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+        <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
         <li><i class="icon-inbox"></i> <a href="#">課題の解決方法を投稿</a></li>
         <li><i class="icon-info-sign"></i> <a href="#">もっと詳しく</a></li>
     </ul>
@@ -32,21 +33,21 @@
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
             <dt>未来に先回りして点と点をつなげることはできない。君たちにできるのは過去を振り返ってつなげることだけなんだ。だから点と点がいつか何らかのかたちでつながると信じなければならない。</dt>
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
             <dt>Steve Jobs、なんで死んでしもうたんや。</dt>
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
         </dl>
@@ -54,13 +55,20 @@
 </div>
 
 <div class="issue">
-    <h2>Stay foolish, Stay hungry.</h2>
+    <div class="issue-header">
+        <h2>Stay foolish, Stay hungry.</h2>
+        <ul>
+            <li><span>ワイルド！</span> 123</li>
+            <li><span>解決方法</span> 9</li>
+        </ul>
+    </div>
+    
     <p>私が若い頃 "The Whole Earth Catalogue 全地球カタログ" というすごい出版物があって、私と同じ世代ではバイブルのように扱われていました。それはステュアート・ブランドという人が、ここからそれほど遠くないメンローパークで制作したもので、彼の詩的なタッチで彩られていました。１９６０年代の終わり頃はパソコンもDTPもない時代ですから、全てタイプライターとハサミとポラロイドカメラで作られていました。それはまるでグーグルのペーパーバック版のようなもので、グーグルが３５年遡って登場したかのような理想的な本で、すごいツールと壮大な概念に溢れかえっていました。</p>
     <p>スチュアートと彼のチームは ”The Whole Earth Catalogue” を何度か発行しましたが、ひと通りの内容を網羅した時点で最終号を出しました。それは１９７０年代半ばで、私がちょうど君たちの年代だった頃です。最終号の裏表紙は、朝早い田舎道の写真だったのですが、それはヒッチハイクの経験があればどこか見たことある光景でした。写真の下には "Stay hungry, Stay foolish." という言葉が書かれていたのです。</p>
     
     <ul class="info">
         <li><i class="icon-user"></i> <a href="#">takewick</a></li>
-        <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+        <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
         <li><i class="icon-inbox"></i> <a href="#">課題の解決方法を投稿</a></li>
         <li><i class="icon-info-sign"></i> <a href="#">もっと詳しく</a></li>
     </ul>
@@ -71,21 +79,21 @@
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
             <dt>未来に先回りして点と点をつなげることはできない。君たちにできるのは過去を振り返ってつなげることだけなんだ。だから点と点がいつか何らかのかたちでつながると信じなければならない。</dt>
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
             <dt>Steve Jobs、なんで死んでしもうたんや。</dt>
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
         </dl>
@@ -93,13 +101,20 @@
 </div>
 
 <div class="issue">
-    <h2>Stay foolish, Stay hungry.</h2>
+    <div class="issue-header">
+        <h2>Stay foolish, Stay hungry.</h2>
+        <ul>
+            <li><span>ワイルド！</span> 123</li>
+            <li><span>解決方法</span> 9</li>
+        </ul>
+    </div>
+    
     <p>私が若い頃 "The Whole Earth Catalogue 全地球カタログ" というすごい出版物があって、私と同じ世代ではバイブルのように扱われていました。それはステュアート・ブランドという人が、ここからそれほど遠くないメンローパークで制作したもので、彼の詩的なタッチで彩られていました。１９６０年代の終わり頃はパソコンもDTPもない時代ですから、全てタイプライターとハサミとポラロイドカメラで作られていました。それはまるでグーグルのペーパーバック版のようなもので、グーグルが３５年遡って登場したかのような理想的な本で、すごいツールと壮大な概念に溢れかえっていました。</p>
     <p>スチュアートと彼のチームは ”The Whole Earth Catalogue” を何度か発行しましたが、ひと通りの内容を網羅した時点で最終号を出しました。それは１９７０年代半ばで、私がちょうど君たちの年代だった頃です。最終号の裏表紙は、朝早い田舎道の写真だったのですが、それはヒッチハイクの経験があればどこか見たことある光景でした。写真の下には "Stay hungry, Stay foolish." という言葉が書かれていたのです。</p>
     
     <ul class="info">
         <li><i class="icon-user"></i> <a href="#">takewick</a></li>
-        <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+        <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
         <li><i class="icon-inbox"></i> <a href="#">課題の解決方法を投稿</a></li>
         <li><i class="icon-info-sign"></i> <a href="#">もっと詳しく</a></li>
     </ul>
@@ -110,24 +125,36 @@
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
             <dt>未来に先回りして点と点をつなげることはできない。君たちにできるのは過去を振り返ってつなげることだけなんだ。だから点と点がいつか何らかのかたちでつながると信じなければならない。</dt>
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
             <dt>Steve Jobs、なんで死んでしもうたんや。</dt>
             <dd>
                 <ul class="info">
                     <li><i class="icon-user"></i> <a href="#">summerwind</a></li>
-                    <li><i class="icon-heart"></i> <a href="#">いいね！</a></li>
+                    <li><i class="icon-heart"></i> <a href="#">ワイルド！</a></li>
                 </ul>
             </dd>
         </dl>
     </div>
+</div>
+
+<div class="pagination pagination-centered">
+    <ul>
+        <li class="disabled"><a href="#">«</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+    </ul>
 </div>
 
