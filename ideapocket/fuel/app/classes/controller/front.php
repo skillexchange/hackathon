@@ -162,6 +162,52 @@ class Controller_Front extends Controller_Template
 		$this->template->title = $user.' | Idea Pocket';
 		$this->template->content = View::forge('front/user', array('issues' => $issues));
 	}
+
+    /**
+	 * 課題ページ
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_issue()
+	{
+	    $issue_id = $this->param('issue');
+	    $issue = array(
+	        'id'            => 2,
+            'user'          => 'takewick',
+            'title'         => 'お風呂の掃除がめんどくさい',
+            'description'   => '私が若い頃 "The Whole Earth Catalogue 全地球カタログ" というすごい出版物があって、私と同じ世代ではバイブルのように扱われていました。それはステュアート・ブランドという人が、ここからそれほど遠くないメンローパークで制作したもので、彼の詩的なタッチで彩られていました。１９６０年代の終わり頃はパソコンもDTPもない時代ですから、全てタイプライターとハサミとポラロイドカメラで作られていました。それはまるでグーグルのペーパーバック版のようなもので、グーグルが３５年遡って登場したかのような理想的な本で、すごいツールと壮大な概念に溢れかえっていました。
+
+スチュアートと彼のチームは ”The Whole Earth Catalogue” を何度か発行しましたが、ひと通りの内容を網羅した時点で最終号を出しました。それは１９７０年代半ばで、私がちょうど君たちの年代だった頃です。最終号の裏表紙は、朝早い田舎道の写真だったのですが、それはヒッチハイクの経験があればどこか見たことある光景でした。写真の下には "Stay hungry, Stay foolish." という言葉が書かれていたのです。',
+            'like'          => 56,
+            'solutions'     => array(
+                array(
+                    'id'            => 7,
+                    'user'          => 'connvoi_tyo',
+                    'title'         => '解決方法その1',
+                    'description'   => 'スチュアートと彼のチームは ”The Whole Earth Catalogue” を何度か発行しましたが、ひと通りの内容を網羅した時点で最終号を出しました。それは１９７０年代半ばで、私がちょうど君たちの年代だった頃です。最終号の裏表紙は、朝早い田舎道の写真だったのですが、それはヒッチハイクの経験があればどこか見たことある光景でした。写真の下には "Stay hungry, Stay foolish." という言葉が書かれていたのです。',
+                    'like'          => 12,
+                ),
+                array(
+                    'id'            => 6,
+                    'user'          => 'connvoi_tyo',
+                    'title'         => '解決方法その2',
+                    'description'   => 'スチュアートと彼のチームは ”The Whole Earth Catalogue” を何度か発行しましたが、ひと通りの内容を網羅した時点で最終号を出しました。それは１９７０年代半ばで、私がちょうど君たちの年代だった頃です。最終号の裏表紙は、朝早い田舎道の写真だったのですが、それはヒッチハイクの経験があればどこか見たことある光景でした。写真の下には "Stay hungry, Stay foolish." という言葉が書かれていたのです。',
+                    'like'          => 7,
+                ),
+                array(
+                    'id'            => '5',
+                    'user'          => 'summerwind',
+                    'title'         => '解決方法その3',
+                    'description'   => 'スチュアートと彼のチームは ”The Whole Earth Catalogue” を何度か発行しましたが、ひと通りの内容を網羅した時点で最終号を出しました。それは１９７０年代半ばで、私がちょうど君たちの年代だった頃です。最終号の裏表紙は、朝早い田舎道の写真だったのですが、それはヒッチハイクの経験があればどこか見たことある光景でした。写真の下には "Stay hungry, Stay foolish." という言葉が書かれていたのです。',
+                    'like'          => 5,
+                ),
+            ),
+	    );
+
+		$this->template->title = $issue['title'].' | Idea Pocket';
+		$this->template->content = View::forge('front/issue', array('issue' => $issue));
+	}
 	
 	/**
 	 * 404ページ
@@ -172,5 +218,15 @@ class Controller_Front extends Controller_Template
 	public function action_404()
 	{
 		return Response::forge(ViewModel::forge('front/404'), 404);
+	}
+	
+	/**
+	 * 事前処理
+	 * 
+	 * @access  public
+	 */
+	public function before()
+	{
+	    parent::before();
 	}
 }

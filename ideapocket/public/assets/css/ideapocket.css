@@ -12,7 +12,7 @@ a:hover {
 }
 
 header {
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -20,6 +20,11 @@ header h1 {
     color: #559700;
     font-family: 'Signika', sans-serif;
     font-weight: bold;
+}
+
+header h1 a:hover {
+    color: #333;
+    text-decoration: none;
 }
 
 header p {
@@ -41,6 +46,10 @@ form p {
 
 form textarea {
     width: 98%;
+}
+
+#main #solution-form {
+    padding: 30px 0 0;
 }
 
 #aside h2 {
@@ -68,13 +77,8 @@ form textarea {
     padding: 0 0 10px 0;
 }
 
-.solution-form {
-    padding: 10px 0 0;
-    border-top: 1px solid #ddd;
-}
-
 .solutions {
-    padding: 25px 0 0;
+    padding: 30px 0 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -88,6 +92,7 @@ form textarea {
     position: relative;
 }
 
+.solution h4,
 .solution p {
     margin: 0;
     padding: 0 0 5px 0;
@@ -164,10 +169,6 @@ form textarea {
     border-radius: 3px; 
     color: #fff;
     background-color: #333;
-}
-
-.breadcrumb {
-    margin: 0 30px 25px 0;
 }
 
 .pagination {

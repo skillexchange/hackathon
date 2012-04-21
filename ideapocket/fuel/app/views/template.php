@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>Idea Pocket*</h1> 
+        <h1><a href="/">Idea Pocket*</a></h1> 
         <p>Think, Imagine, Hack!</p>
     </header>
     
