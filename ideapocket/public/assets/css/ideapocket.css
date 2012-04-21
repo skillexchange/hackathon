@@ -80,17 +80,17 @@ form textarea {
 .issue-header ul li {
     margin: 0 0 0 5px;
     padding: 0 5px 0 0;
-    border: 1px solid #000;
+    border: 1px solid #253E59;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color: #000;
+    color: #253E59;
     display: inline-block;
 }
 
 .issue-header ul li span {
     color: #fff;
-    background-color: #000;
+    background-color: #253E59;
     padding: 2px 6px;
     margin: 0 3px 0 0;
     display: inline-block;
@@ -153,9 +153,8 @@ form textarea {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; 
-    color: #000;
-    border: 1px solid #000;
-    background-color: #fff;  
+    color: #fff;
+    background-color: #253E59;  
 }
 
 .pagination {
