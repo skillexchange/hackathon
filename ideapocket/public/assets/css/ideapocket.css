@@ -47,6 +47,11 @@ form textarea {
     font-size: 20px;
 }
 
+#aside h3 {
+    margin: 0 0 10px;
+    border-bottom: 1px solid #ddd;
+}
+
 #aside #issue-form {
     padding: 0 0 30px;
 }
@@ -55,8 +60,40 @@ form textarea {
     padding: 0 30px 40px 0;
 }
 
-.issue h2 {
-    padding: 0 0 5px 0;
+.issue-header {
+    position: relative;
+}
+
+.issue-header h2 {
+    padding: 0 0 8px 0;
+}
+
+.issue-header ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    line-height: 36px;
+    margin: 0;
+}
+
+.issue-header ul li {
+    margin: 0 0 0 5px;
+    padding: 0 5px 0 0;
+    border: 1px solid #000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #000;
+    display: inline-block;
+}
+
+.issue-header ul li span {
+    color: #fff;
+    background-color: #000;
+    padding: 2px 6px;
+    margin: 0 3px 0 0;
+    display: inline-block;
 }
 
 .issue .info {
@@ -100,11 +137,23 @@ form textarea {
     padding: 0 0 30px;
 }
 
-.rank h3 {
-    margin: 0 0 10px;
-    border-bottom: 1px solid #ddd;
+.rank ol li {
+    line-height: 18px;
+    position: relative;
+    padding: 0 0 8px 45px;
 }
 
-.rank ol li {
-    padding: 0 0 8px;
+.rank .badge {
+    width: 20px;
+    padding: 0 7px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;  
 }
