@@ -82,6 +82,19 @@ class Controller_Front extends Controller_Template
 	}
 	
 	/**
+	 * ユーザーページ
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_user()
+	{
+	    $user = $this->param('user');
+		$this->template->title = 'Idea Pocket | ';
+		$this->template->content = View::forge('front/user', array('issues' => $issues));
+	}
+	
+	/**
 	 * 404ページ
 	 * 
 	 * @access  public

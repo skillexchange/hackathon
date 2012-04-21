@@ -12,9 +12,9 @@
     
     <ul class="info">
         <li><i class="icon-user"></i> <a href="/user/<?php echo $issue['user']; ?>"><?php echo $issue['user']; ?></a></li>
-        <li><i class="icon-star"></i> <a href="/like/issue/<?php echo $issue['id']; ?>">いいね！</a></li>
+        <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/like">いいね！</a></li>
         <li><i class="icon-inbox"></i> <a href="/issue/<?php echo $issue['id']; ?>#solution-form">課題の解決方法を投稿</a></li>
-        <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>">もっと詳しく</a></li>
+        <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>">詳しくみる</a></li>
     </ul>
     
     <!--
@@ -37,7 +37,8 @@
             <span class="count-mini">★ <?php echo $solution['like']; ?></span>
             <ul class="info">
                 <li><i class="icon-user"></i> <a href="/user/<?php echo $solution['user']; ?>"><?php echo $solution['user']; ?></a></li>
-                <li><i class="icon-heart"></i> <a href="/like/solution/<?php echo $solution['id']; ?>">いいね！</a></li>
+                <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/solution/<?php echo $solution['id']; ?>/like">いいね！</a></li>
+                <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>#solution<?php echo $solution['id']; ?>">詳しくみる</a></li>
             </ul>
         </div>
 <?php } ?>

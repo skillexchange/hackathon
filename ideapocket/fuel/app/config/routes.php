@@ -1,5 +1,11 @@
 <?php
 return array(
-	'_root_'  => 'front/index',  // The default route
-	'_404_'   => 'front/404',    // The main 404 route
+	'_root_'            => 'front/index',
+	'issue/post'        => 'front/issue_post',
+	'issue/:issue'      => 'front/issue',
+	'issue/:issue/like' => 'front/issue_like',
+	'issue/:issue/solution/post'            => 'front/solution_post',
+	'issue/:issue/solution/:solution/like'  => 'front/solution_like',
+	'user/:id'          => 'front/user',
+	'_404_'             => 'front/404',
 );
