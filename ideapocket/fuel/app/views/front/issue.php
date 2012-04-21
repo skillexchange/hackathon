@@ -33,6 +33,7 @@
     <div id="solution-form">
         <h3>課題の解決方法</h3>
         <p>この課題に対する<strong>解決方法</strong>を投稿してください。</p>
+        <div class="alert alert-error">タイトルと具体的な解決方法の内容を入力してください。</div>
         <form class="well">
             <p><input type="text" placeholder="タイトル" class="span6"></p>
             <p><textarea placeholder="具体的な解決方法について" rows="5"></textarea></p>
