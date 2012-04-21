@@ -5,10 +5,16 @@
 
 return array(
 	'default' => array(
+      'type'=>'mysqli',
 		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=fuel_dev',
+			'hostname'        => 'localhost',
+      'database'   => 'ideapocket',
 			'username'   => 'root',
-			'password'   => 'root',
+			'password'   => '',
 		),
+    'table_prefix'=>'',
+    'charset'=>'utf8',
+    'caching'=>false,
+    'profiling'=>true,
 	),
 );
