@@ -36,7 +36,7 @@ class Controller_Like extends Controller_Template
 		   $data['likes'] = Model_Like::find('all',array('where'=>array('issue_id'=>$id)));
     }
 
-    $view = View::forge('template_default');
+    $view = View::forge('template_empty');
 		$view->set_global('title','Likes');
 		$view->set_global('type',$type);
 		$view->content = View::forge('like/who', $data);
@@ -179,13 +179,14 @@ class Controller_Like extends Controller_Template
 	{
 		if ($like = Model_Like::find($id))
 		{
-			$like->delete();
 
+			$like->delete();
 			Session::set_flash('success', 'Deleted like #'.$id);
 		}
 
 		else
 		{
+
 			Session::set_flash('error', 'Could not delete like #'.$id);
 		}
 
