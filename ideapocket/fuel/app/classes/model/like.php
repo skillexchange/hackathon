@@ -27,10 +27,10 @@ class Model_Like extends Model
 	public static function validate($factory)
 	{
 		$val = Validation::forge($factory);
-		$val->add_field('issue_id', 'Issue Id', 'required|valid_string[numeric]');
-		$val->add_field('solution_id', 'Solution Id', 'required|valid_string[numeric]');
-		$val->add_field('user', 'User', 'required|max_length[255]');
-		$val->add_field('deleted', 'Deleted', 'required|valid_string[numeric]');
+		$val->add_field('issue_id', 'Issue Id', 'valid_string[numeric]');
+		$val->add_field('solution_id', 'Solution Id', 'valid_string[numeric]');
+		$val->add_field('user', 'User', 'max_length[255]');
+		$val->add_field('deleted', 'Deleted', 'valid_string[numeric]');
 
 		return $val;
 	}

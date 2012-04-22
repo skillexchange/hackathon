@@ -33,5 +33,6 @@
 
 <?php endif; ?><p>
 	<?php echo Html::anchor('like/create', 'Add new Like', array('class' => 'btn success')); ?>
+	<?php echo Html::anchor('like/add', 'Add new Like-api', array('class' => 'btn success')); ?>
 
 </p>

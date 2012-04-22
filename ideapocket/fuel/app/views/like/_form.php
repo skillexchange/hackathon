@@ -1,4 +1,4 @@
-<?php echo Form::open(array('class' => 'form-stacked')); ?>
+<?php echo Form::open(array('action'=> Uri::create('like/add'),'class' => 'form-stacked')); ?>
 
 	<fieldset>
 		<div class="clearfix">
