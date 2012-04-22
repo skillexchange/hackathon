@@ -1,11 +1,36 @@
 <?php
 return array(
-	'_root_'            => 'front/index',
-	'issue/post'        => 'front/issue_post',
-	'issue/:issue'      => 'front/issue',
-	'issue/:issue/like' => 'front/issue_like',
-	'issue/:issue/solution/post'            => 'front/solution_post',
-	'issue/:issue/solution/:solution/like'  => 'front/solution_like',
-	'user/:id'          => 'front/user',
-	'_404_'             => 'front/404',
+    // ------------------------------------------
+    // Home
+    // ------------------------------------------
+	'_root_'            => 'issue/index',
+	'_404_'             => 'issue/404',
+	
+	// ------------------------------------------
+	// Issue
+	// ------------------------------------------
+	'issue/create'      => 'issue/create',
+	'issue/:issue'      => 'issue/view',
+	'issue/:issue/like' => 'issue/like',
+	
+	// ------------------------------------------
+	// Solution
+	// ------------------------------------------
+	'issue/:issue/solution/create'          => 'solution/create',
+	'issue/:issue/solution/:solution/like'  => 'solution/like',
+	
+	// ------------------------------------------
+	// User
+	// ------------------------------------------
+	'user/:id' => 'user/view',
+	
+	// ------------------------------------------
+	// API
+	// ------------------------------------------
+	'api/issue/post'        => 'api/issue_post',
+	'api/issue/:issue'      => 'api/issue_issue',
+	'api/issue/:issue/like' => 'api/issue_like',
+	'api/issue/:issue/solution/post'            => 'api/solution_post',
+	'api/issue/:issue/solution/:solution/like'  => 'api/solution_like',
+	'api/user/:id'          => 'api/user_user',
 );

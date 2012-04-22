@@ -1,30 +1,51 @@
 <?php
 class Controller_Issue extends Controller_Template 
 {
-
-  public function before($data=null)
-  {
-      parent::before();
-      $this->auto_render=false;
-  
-  }
-	public function action_index()
-	{
-    $data['issues'] = Model_Issue::find('all', array(
-        'related'=> array(
-            'solutions'=>array(
-                'order_by'=>array('liked'=>'desc'),
-                'related'=>array('likes')
+    /**
+	 * 共通の前処理
+	 * 
+	 * @access  public
+	 */
+    public function before()
+    {
+        parent::before();
+    }
+    
+    /**
+	 * Issueの一覧表示
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
+    public function action_index()
+    {
+        // Issueリストの取得
+        $issues = Model_Issue::find('all', array(
+            'order_by'  => array('id' => 'desc'),
+            'limit'     => 10,
+            'related'   => array(
+                'likes'     => array(),
+                'solutions' => array(
+                    'order_by'  => array('created_at' => 'desc'),
+                    'related'   => array('likes'),
+                ),
             ),
-            'likes'
-        )
-    ));
-    #Debug::dump($data['issues']);
-		$this->template->title = "Issues";
-  	$this->template->content = View::forge('issue/index', $data);
-    $this->response->body = $this->template;
+        ));
+        
+		$this->template->title = "Idea Pocket";
+		$this->template->content = View::forge('issue/index', array(
+		    'issues'    => $issues,
+		    'message'   => Session::get_flash('issue'),
+		));
 	}
 
+    
+    /**
+	 * Issueの個別表示
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_view($id = null)
 	{
 		$data['issue'] = Model_Issue::find($id, array('related'=>array('solutions', 'likes')));
@@ -33,47 +54,50 @@ class Controller_Issue extends Controller_Template
 
 		$this->template->title = "Issue";
 		$this->template->content = View::forge('issue/view', $data);
-    $this->response->body = $this->template;
-
+        $this->response->body = $this->template;
 	}
 
+    
+    /**
+	 * Issueの作成
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_create()
 	{
-		if (Input::method() == 'POST')
-		{
+	    $error = false;
+	    
+	    if(Input::method() == 'POST') {
+	        // バリデーターを生成
 			$val = Model_Issue::validate('create');
-			
-			if ($val->run())
-			{
-				$issue = Model_Issue::forge(array(
-					'title' => Input::post('title'),
-					'description' => Input::post('description'),
-					'user' => Input::post('user'),
-					'deleted' => Input::post('deleted'),
-					'likes' => Input::post('likes'),
-				));
-
-				if ($issue and $issue->save())
-				{
-					Session::set_flash('success', 'Added issue #'.$issue->id.'.');
-
-					Response::redirect('issue');
+			// バリデーションを実行
+			if($val->run()) {
+			    // データを取得
+			    $data = $val->validated();
+			    $data['liked'] = 0;
+			    $data['deleted'] = 0;
+			    
+			    // Issueを作成して保存
+				$issue = Model_Issue::forge($data);
+				if($issue->save()) {
+				    // リダイレクト
+				    Response::redirect('/');
+				} else {
+					$error = true;
 				}
-
-				else
-				{
-					Session::set_flash('error', 'Could not save issue.');
-				}
-			}
-			else
-			{
-				Session::set_flash('error', $val->show_errors());
+			} else {
+			    $error = true;
 			}
 		}
-
-		$this->template->title = "Issues";
-		$this->template->content = View::forge('issue/create');
-
+		
+		// Issueリストの取得
+        $issues = Model_Issue::find('all', array());
+        
+        // テンプレート変数を設定
+		$this->template->title = "Idea Pocket";
+		$this->template->error = $error;
+		$this->template->content = View::forge('issue/index', array('issues' => $issues));
 	}
 
 	public function action_edit($id = null)

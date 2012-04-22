@@ -7,17 +7,16 @@ class Create_solutions
 	public function up()
 	{
 		\DBUtil::create_table('solutions', array(
-			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true),
-			'title' => array('type' => 'text'),
-			'description' => array('type' => 'text'),
-			'user' => array('constraint' => 255, 'type' => 'varchar'),
-			'url' => array('type' => 'text'),
-			'issue_id' => array('constraint' => 11, 'type' => 'int'),
-			'deleted' => array('constraint' => 11, 'type' => 'int'),
-			'likes' => array('constraint' => 11, 'type' => 'int'),
-			'created_at' => array('constraint' => 11, 'type' => 'int'),
-			'updated_at' => array('constraint' => 11, 'type' => 'int'),
-
+			'id'            => array('type' => 'int', 'constraint' => 11, 'auto_increment' => true),
+			'issue_id'      => array('type' => 'int', 'constraint' => 11),
+			'title'         => array('type' => 'varchar', 'constraint' => 255),
+			'description'   => array('type' => 'text'),
+			'user'          => array('type' => 'varchar', 'constraint' => 24),
+			'url'           => array('type' => 'text'),
+			'liked'         => array('type' => 'int', 'constraint' => 11),
+			'deleted'       => array('type' => 'int', 'constraint' => 1),
+			'created_at'    => array('type' => 'datetime'),
+			'updated_at'    => array('type' => 'datetime'),
 		), array('id'));
 	}
 

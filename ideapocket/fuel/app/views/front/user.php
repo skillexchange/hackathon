@@ -1,10 +1,3 @@
-<ul class="breadcrumb">
-  <li>
-    <a href="/">Home</a> <span class="divider">/</span>
-  </li>
-  <li class="active">takewick</li>
-</ul>
-
 <?php foreach($issues as $issue) { ?>
 <div class="issue">
     <div class="issue-header">

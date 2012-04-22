@@ -1,46 +1,52 @@
-<?php if ($issues): ?>
-<?php foreach ($issues as $issue): ?>
-    <div class="issue">
-    <h2><?php echo $issue->title; ?></h2>
-    <p><?php echo $issue->description; ?></p>
-    <p>by <?php echo $issue->user; ?> - <a href="#">Like(<?php echo $issue->liked; ?>)</a> - <?php 
-              echo Html::anchor('issue/view/'.$issue->id, 'Solution('.count($issue->solutions).')'); 
-              //when this isuee is owned by user, it show 'edit' and 'delete' link.
-              if($issue->user=='kyagi'): 
-				         echo ' - '.Html::anchor('issue/edit/'.$issue->id, 'Edit'); 
-                 echo ' - '.Html::anchor('issue/delete/'.$issue->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); 
-              endif;
-          ?></p>
-
-    <form class="well">
-        <input type="text" placeholder="Solution" class="span8"><br>
-        <textarea placeholder="Description" class="span8"></textarea><br>
-        <button class="btn" type="submit">Submit</button>
-    </form>
-
-
-    <dl class="solution">
-    <?php foreach ($issue->solutions as $solution): ?>
-        <dt><?php echo $solution->title; ?><?php echo $solution->description; ?></dt>
-        <dd class="info">by <?php echo $solution->user; ?> - <a href="#">Like(<?php echo $solution->liked; ?>)</a> - <?php   
-				      echo Html::anchor('solution/view/'.$issue->id, 'See more'); 
-              if($issue->user=='kyagi'): 
-                 //when this solution is owned by user, it show 'edit' and 'delete' link.
-				         echo ' - '.Html::anchor('solution/edit/'.$solution->id, 'Edit'); 
-                 echo ' - '.Html::anchor('solution/delete/'.$solution->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); 
-              endif;
-                   ?></p>
-    <?php endforeach; ?>
-    </dl>
+<?php foreach($issues as $issue) { ?>
+<div class="issue">
+    <div class="issue-header">
+        <h2><?php echo $issue['title']; ?></h2>
+        <ul class="count">
+            <li><span><i class="icon-inbox icon-white"></i></span> <?php echo count($issue['solutions']); ?></li>
+            <li><span><i class="icon-star icon-white"></i></span> <?php echo count($issue['likes']); ?></li>
+        </ul>
     </div>
-<?php endforeach; ?>	</tbody>
+    
+    <?php echo '<p>'.str_replace("\n\n", '</p><p>', $issue['description']).'</p>'; ?>
+    
+    <ul class="info">
+        <li><i class="icon-user"></i> <a href="/user/<?php echo $issue['user']; ?>"><?php echo $issue['user']; ?></a></li>
+        <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/like">いいね！</a></li>
+        <li><i class="icon-inbox"></i> <a href="/issue/<?php echo $issue['id']; ?>#solution-form">課題の解決方法を投稿</a></li>
+        <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>">詳しくみる</a></li>
+    </ul>
 
-<?php else: ?>
-<p>No Issues.</p>
+<?php if(0 < count($issue['solutions'])) { ?>
+    <div class="solutions">
+        <h3>みんなの解決方法</h3>
+<?php foreach($issue['solutions'] as $solution) { ?>
 
-<?php endif; ?>
+        <div class="solution">
+            <p><?php echo $solution['title']; ?></p>
+            <span class="count-mini">★ <?php echo $solution['like']; ?></span>
+            <ul class="info">
+                <li><i class="icon-user"></i> <a href="/user/<?php echo $solution['user']; ?>"><?php echo $solution['user']; ?></a></li>
+                <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/solution/<?php echo $solution['id']; ?>/like">いいね！</a></li>
+                <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>#solution<?php echo $solution['id']; ?>">詳しくみる</a></li>
+            </ul>
+        </div>
+<?php } ?>
+    </div>
+<?php } ?>
+</div>
 
-<p>
-	<?php echo Html::anchor('issue/create', 'Add new Issue', array('class' => 'btn success')); ?>
+<?php } ?>
 
-</p>
+<div class="pagination pagination-centered">
+    <ul>
+        <li class="disabled"><a href="#">«</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+    </ul>
+</div>
+

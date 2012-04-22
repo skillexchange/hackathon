@@ -23,11 +23,13 @@
             <div id="issue-form">
                 <h2>解決するべき課題</h2>
                 <p>あなたが解決するべきだと思う<strong>課題</strong>を投稿してください。</p>
+<?php if(isset($error)) { ?>
                 <div class="alert alert-error">タイトルと具体的な課題の内容を入力してください。</div>
-                <form class="well"　method="post" action="/issue/post">
-                    <p><input type="text" placeholder="タイトル" class="span4"></p>
-                    <p><textarea rows="11" placeholder="具体的な課題について"></textarea></p>
-                    <p><button type="submit" class="btn">投稿</button></p>
+<?php } ?>
+                <form class="well" method="POST" action="/issue/create">
+                    <p><input type="text" placeholder="タイトル" class="span4" name="title"></p>
+                    <p><textarea rows="11" placeholder="具体的な課題について" name="description"></textarea></p>
+                    <p><input type="hidden" name="user" value="dummy"><button type="submit" class="btn">投稿</button></p>
                 </form>
             </div>
             

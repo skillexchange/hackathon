@@ -78,7 +78,7 @@ class Controller_Front extends Controller_Template
 	    );
 	    
 		$this->template->title = 'Idea Pocket';
-		$this->template->content = View::forge('front/index', array('issues' => $issues ));
+		$this->template->content = View::forge('front/index', array('issues' => $issues));
 	}
 	
 	/**
