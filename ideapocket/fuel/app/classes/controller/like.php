@@ -27,6 +27,22 @@ class Controller_Like extends Controller_Template
 		$this->template->content = View::forge('like/view', $data);
 
 	}
+  public function action_who($type, $id)
+	{
+		is_null($id) and Response::redirect('Issue');
+    if($type=='solution'){
+		   $data['likes'] = Model_Like::find('all',array('where'=>array('solution_id'=>$id)));
+    }else{
+		   $data['likes'] = Model_Like::find('all',array('where'=>array('issue_id'=>$id)));
+    }
+
+    $view = View::forge('template_default');
+		$view->set_global('title','Likes');
+		$view->set_global('type',$type);
+		$view->content = View::forge('like/who', $data);
+
+    return $view;
+	}
 
 	public function action_create()
 	{
