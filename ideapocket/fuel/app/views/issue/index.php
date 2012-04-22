@@ -20,9 +20,7 @@
 <?php if(0 < count($issue['solutions'])) { ?>
     <div class="solutions">
         <h3>みんなの解決方法</h3>
-<?php for($ix=4; $ix>=2; $ix--) { ?>
-<?php if(isset($issue['solutions'][$ix])) { ?>
-        <?php $solution = $issue['solutions'][$ix]; ?>
+<?php foreach($issue['solutions'] as $solution) { ?>
         <div class="solution">
             <p><?php echo $solution['title']; ?></p>
             <span class="count-mini">★ <?php echo count($solution['likes']); ?></span>
@@ -32,7 +30,6 @@
                 <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>#solution<?php echo $solution['id']; ?>">詳しくみる</a></li>
             </ul>
         </div>
-<?php } ?>
 <?php } ?>
     </div>
 <?php } ?>

@@ -32,9 +32,6 @@ class Model_Issue extends Model
             'key_to'          => 'issue_id',   
             'cascade_save'    => true,
             'cascade_delete'  => false,
-            'conditions'      => array(
-                'order_by'  => array('id' => 'desc'),
-            ),
         ),
         'likes' => array(
             'key_from'        => 'id',
