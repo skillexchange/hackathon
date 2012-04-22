@@ -23,7 +23,7 @@
             <div id="issue-form">
                 <h2>解決するべき課題</h2>
                 <p>あなたが解決するべきだと思う<strong>課題</strong>を投稿してください。</p>
-<?php if(isset($error)) { ?>
+<?php if(isset($error) && $error) { ?>
                 <div class="alert alert-error">タイトルと具体的な課題の内容を入力してください。</div>
 <?php } ?>
                 <form class="well" method="POST" action="/issue/create">

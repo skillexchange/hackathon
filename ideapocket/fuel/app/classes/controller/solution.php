@@ -1,22 +1,39 @@
 <?php
 class Controller_Solution extends Controller_Template 
 {
-  public function before($data=null)
-  {
-      parent::before();
-      $this->auto_render=false;
-  
-  }
-
+    /**
+	 * 共通の前処理
+	 * 
+	 * @access  public
+	 */
+    public function before()
+    {
+        parent::before();
+    }
+    
+    
+    /**
+	 * Solutionの一覧表示
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_index()
 	{
 		$data['solutions'] = Model_Solution::find('all', array('related'=>'likes'));
-//    Debug::dump($data['solutions']);
-//		$this->template->title = "Solutions";
-//		$this->template->content = View::forge('solution/index', $data);
-
+        //Debug::dump($data['solutions']);
+        
+        $this->template->title = "Solutions";
+        $this->template->content = View::forge('solution/index', $data);
 	}
-
+    
+    
+    /**
+	 * Solutionの個別表示
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_view($id = null)
 	{
 		$data['solution'] = Model_Solution::find($id);
@@ -27,46 +44,67 @@ class Controller_Solution extends Controller_Template
 		$this->template->content = View::forge('solution/view', $data);
 
 	}
-
+    
+    
+    /**
+	 * Solutionの作成
+	 * 
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_create()
 	{
-		if (Input::method() == 'POST')
-		{
+	    $error = false;
+	    
+	    if(Input::method() == 'POST') {
+	        // バリデーターを生成
 			$val = Model_Solution::validate('create');
+			// 必要な追加データ
+			$append_data = array(
+			    'url'       => '',
+			    'user'      => 'summerwind',
+			    'liked'     => 0,
+			    'deleted'   => 0,
+			);
 			
-			if ($val->run())
-			{
-				$solution = Model_Solution::forge(array(
-					'title' => Input::post('title'),
-					'description' => Input::post('description'),
-					'user' => Input::post('user'),
-					'url' => Input::post('url'),
-					'issue_id' => Input::post('issue_id'),
-					'deleted' => Input::post('deleted'),
-					'liked' => Input::post('liked'),
-				));
-
-				if ($solution and $solution->save())
-				{
-					Session::set_flash('success', 'Added solution #'.$solution->id.'.');
-
-					Response::redirect('solution');
+			// バリデーションを実行
+			if($val->run($append_data, true)) {
+			    // データを取得
+			    $data = $val->validated();
+			    
+			    // Solutionを作成して保存
+				$solution = Model_Solution::forge($data);
+				if($solution->save()) {
+				    // リダイレクト
+				    Response::redirect('/issue/'.$data['issue_id']);
+				} else {
+					$error = true;
 				}
-
-				else
-				{
-					Session::set_flash('error', 'Could not save solution.');
-				}
-			}
-			else
-			{
-				Session::set_flash('error', $val->show_errors());
+			} else {
+			    $error = true;
 			}
 		}
-
-		$this->template->title = "Solutions";
-		$this->template->content = View::forge('solution/create');
-
+		
+		// Issue IDを取得
+		$issue_id = $this->param('issue_id');
+		
+        // Issueリストを取得
+        $issue = Model_Issue::find($issue_id, array(
+            'related'   => array(
+                'likes'     => array(),
+                'solutions' => array(
+                    //'order_by'  => array('id' => 'asc'),
+                    'related'   => array('likes'),
+                ),
+            ),
+        ));
+        
+        // テンプレート変数を設定
+		$this->template->title = $issue['title']."いえーい | Idea Pocket";
+		$this->template->content = View::forge('issue/view', array(
+		    'issue' => $issue,
+		    'error' => $error,
+		));
 	}
 
 	public function action_edit($id = null)
