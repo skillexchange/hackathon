@@ -28,90 +28,10 @@
 <?php if(isset($error) && $error) { ?>
                 <div class="alert alert-error">タイトルと具体的な課題の内容を入力してください。</div>
 <?php } ?>
-                <form class="well" method="POST" action="/issue/create">
-                    <p><input type="text" placeholder="タイトル" class="span4" name="title"></p>
-                    <p><textarea rows="11" placeholder="具体的な課題について" name="description"></textarea></p>
-                    <p><input type="hidden" name="user" value="dummy"><button type="submit" class="btn">投稿</button></p>
-                </form>
+                <?php echo Html::anchor('issue/create', 'Add new Issue', array('class' => 'btn success')); ?>
             </div>
             
-            <div class="rank">
-                <h3>人気の課題</h3>
-                <ol>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">★ 123</span> 
-                    </li>
-                    <li>
-                        <a href="#">未来に先回りして点と点をつなげることはできない</a>
-                        <span class="count-mini">★ 102</span>
-                    </li>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">★ 98</span> 
-                    </li>
-                    <li>
-                        <a href="#">未来に先回りして点と点をつなげることはできない</a>
-                        <span class="count-mini">★ 73</span>
-                    </li>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">★ 61</span> 
-                    </li>
-                </ol>
-            </div>
-  
-            <div class="rank">
-                <h3>人気の解決方法</h3>
-                <ol>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">★ 123</span> 
-                    </li>
-                    <li>
-                        <a href="#">未来に先回りして点と点をつなげることはできない</a>
-                        <span class="count-mini">★ 102</span>
-                    </li>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">★ 98</span> 
-                    </li>
-                    <li>
-                        <a href="#">未来に先回りして点と点をつなげることはできない</a>
-                        <span class="count-mini">★ 73</span>
-                    </li>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">★ 61</span> 
-                    </li>
-                </ol>
-            </div>
-            
-            <div class="rank">
-                <h3>解決方法の多い課題</h3>
-                <ol>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">123</span> 
-                    </li>
-                    <li>
-                        <span class="count-mini">102</span> 
-                        <a href="#">未来に先回りして点と点をつなげることはできない</a>
-                    </li>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">98</span> 
-                    </li>
-                    <li>
-                        <a href="#">未来に先回りして点と点をつなげることはできない</a>
-                        <span class="count-mini">73</span>
-                    </li>
-                    <li>
-                        <a href="#">信じることが全てを変えてくれる</a>
-                        <span class="count-mini">61</span> 
-                    </li>
-                </ol>
-            </div>
+            <?php  echo $rank; ?>
         </div>
     </div>
     

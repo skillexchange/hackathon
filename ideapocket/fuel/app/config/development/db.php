@@ -7,10 +7,11 @@ return array(
     'default' => array(
         'type' => 'mysql',
         'connection' => array(
-            'hostname'  => ':/Applications/MAMP/tmp/mysql/mysql.sock',
+            //'hostname'  => ':/Applications/MAMP/tmp/mysql/mysql.sock',
+            'hostname'  => ':/opt/local/var/run/mysql5/mysqld.sock',
             'database'  => 'ideapocket',
             'username'  => 'root',
-            'password'  => 'root',
+            'password'  => '',
         ),
         'table_prefix' => '',
         'charset' => 'utf8',
