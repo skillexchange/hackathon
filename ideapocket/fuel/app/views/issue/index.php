@@ -20,7 +20,9 @@
 <?php if(0 < count($issue['solutions'])) { ?>
     <div class="solutions">
         <h3>みんなの解決方法</h3>
+<?php $count = 0; ?>
 <?php foreach($issue['solutions'] as $solution) { ?>
+<?php if(3 <= $count) { break; } else { $count++; } ?>
         <div class="solution">
             <p><?php echo $solution['title']; ?></p>
             <span class="count-mini">★ <?php echo count($solution['likes']); ?></span>
