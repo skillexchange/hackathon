@@ -93,7 +93,7 @@ class Controller_Solution extends Controller_Template
             'related'   => array(
                 'likes'     => array(),
                 'solutions' => array(
-                    //'order_by'  => array('id' => 'asc'),
+                    'order_by'  => array('id' => 'desc'),
                     'related'   => array('likes'),
                 ),
             ),

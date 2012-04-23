@@ -19,25 +19,43 @@ class Controller_Issue extends Controller_Template
 	 * @return  Response
 	 */
     public function action_index()
-    {
-        // Issueリストの取得
-        $issues = Model_Issue::find('all', array(
-            'order_by'  => array('id' => 'desc'),
-            'limit'     => 10,
-            'related'   => array(
-                'likes'     => array(),
-                'solutions' => array(
-                    'order_by'  => array('id' => 'desc'),
-                    'related'   => array('likes'),
-                ),
+    {   
+        // ページ数を取得
+        $current_page = $this->param('page');
+        if(is_null($current_page)) {
+            $current_page = 1;
+        }
+        
+        // クエリを生成
+        $query = Model_Issue::find();
+        $query->order_by('id', 'desc');
+        $query->related(array(
+            'likes'     => array(),
+            'solutions' => array(
+                'order_by'  => array('id' => 'desc'),
+                'related'   => array('likes'),
             ),
         ));
         
+        // Issueの件数を取得
+        $total = $query->count();
+        
+        // Paginationの設定
+        Pagination::set_config(array(
+            'pagination_url'    => 'page',
+            'total_items'       => $total,
+            'per_page'          => 5,
+            'uri_segment'       => 2,
+        ));
+        
+        // Issueリストの取得
+        $issues = $query->limit(Pagination::$per_page)->offset(Pagination::$offset)->get();
+
         // テンプレート変数を設定
 		$this->template->title = "Idea Pocket";
 		$this->template->content = View::forge('issue/index', array(
-		    'issues'    => $issues,
-		    'message'   => Session::get_flash('issue'),
+		    'issues'     => $issues,
+		    'message'    => Session::get_flash('issue'),
 		));
 	}
 
