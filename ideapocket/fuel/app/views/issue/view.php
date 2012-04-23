@@ -25,7 +25,7 @@
             <span class="count-mini">★ <?php echo count($solution['likes']); ?></span>
             <ul class="info">
                 <li><i class="icon-user"></i> <a href="/user/<?php echo $solution['user']; ?>"><?php echo $solution['user']; ?></a></li>
-                <li><i class="icon-star"></i> <a href="#/issue/<?php echo $issue['id']; ?>/solution/<?php echo $solution['id']; ?>/like" class="like">いいね！</a></li>
+                <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/solution/<?php echo $solution['id']; ?>/like" class="like">いいね！</a></li>
             </ul>
         </div>
 <?php } ?>
