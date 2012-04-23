@@ -6,6 +6,8 @@
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<?php echo Asset::css('ideapocket.css'); ?>
 	<?php echo Asset::css('http://fonts.googleapis.com/css?family=Signika:700'); ?>
+	<?php echo Asset::js('jquery.min.js'); ?>
+	<?php echo Asset::js('ideapocket.js'); ?>
 </head>
 
 <body>
