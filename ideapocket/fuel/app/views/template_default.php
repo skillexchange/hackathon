@@ -4,16 +4,16 @@
 	<meta charset="utf-8">
 	<title><?php echo $title; ?></title>
 	<?php echo Asset::css('bootstrap.css'); ?>
-	<style>
-		body { margin: 40px; }
-	</style>
+	<?php echo Asset::css('ideapocket.css'); ?>
+	<?php echo Asset::css('http://fonts.googleapis.com/css?family=Signika:700'); ?>
 </head>
+
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="span16">
-				<h1><?php echo $title; ?></h1>
-				<hr>
+    <header>
+        <h1><a href="/">Idea Pocket*</a></h1> 
+        <p>Think, Imagine, Hack!</p>
+    </header>
+
 <?php if (Session::get_flash('success')): ?>
 				<div class="alert-message success">
 					<p>
@@ -28,17 +28,17 @@
 					</p>
 				</div>
 <?php endif; ?>
-			</div>
-			<div class="span16">
-<?php echo $content; ?>
-			</div>
-		</div>
+
+    <div id="content" class="row-fluid">
+        <div id="main" class="span8">
+            <?php echo $content ?>
+        </div>
+
+    </div>
+    
     <footer>
-        <p>
-        Made by &quot;Team Messy&quot;<br>
-        <small>Version: 0.1b</small>
-        </p>
+        <p>Hacked by <a href="http://farm8.staticflickr.com/7202/6894346123_5e37708b20_z.jpg">Team Messy</a>.<br>
+        <small>Build 20120421</small></p>
     </footer>
-	</div>
 </body>
 </html>

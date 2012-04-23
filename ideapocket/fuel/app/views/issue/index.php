@@ -27,7 +27,7 @@
             <ul class="info">
                 <li><i class="icon-user"></i> <a href="/user/<?php echo $solution['user']; ?>"><?php echo $solution['user']; ?></a></li>
                 <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/solution/<?php echo $solution['id']; ?>/like">いいね！</a></li>
-                <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>#solution<?php echo $solution['id']; ?>">詳しくみる</a></li>
+                <li><i class="icon-info-sign"></i> <?php echo Html::anchor('issue/view/'.$issue->id.'#solution'.$solution->id , '詳しくみる'); ?></li>
             </ul>
         </div>
 <?php } ?>

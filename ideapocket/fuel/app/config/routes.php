@@ -9,20 +9,20 @@ return array(
 	// ------------------------------------------
 	// Solution
 	// ------------------------------------------
-	'issue/:issue_id/solution/create'               => 'solution/create',
-	'issue/:issue_id/solution/:solution_id/like'    => 'solution/like',
-	
-	// ------------------------------------------
-	// Issue
-	// ------------------------------------------
+	//'issue/:issue_id/solution/create'               => 'solution/create',
+	//'issue/:issue_id/solution/:solution_id/like'    => 'solution/like',
+	//
+	//// ------------------------------------------
+	//// Issue
+	//// ------------------------------------------
 	'issue/create'          => 'issue/create',
 	'issue/:issue_id'       => 'issue/view',
-	'issue/:issue_id/like'  => 'issue/like',
-	
-	// ------------------------------------------
-	// User
-	// ------------------------------------------
-	'user/:user_id' => 'user/view',
+	//'issue/:issue_id/like'  => 'issue/like',
+	//
+	//// ------------------------------------------
+	//// User
+	//// ------------------------------------------
+	//'user/:user_id' => 'user/view',
 	
 	// ------------------------------------------
 	// API
