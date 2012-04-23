@@ -7,7 +7,7 @@
         </ul>
     </div>
     
-    <?php echo '<p>'.str_replace("\r\n\r\n", '</p><p>', $issue['description']).'</p>'; ?>
+    <?php echo '<p>'.preg_replace("/\r?\n\r?\n/", '</p><p>', $issue['description']).'</p>'; ?>
     
     <ul class="info">
         <li><i class="icon-user"></i> <a href="/user/<?php echo $issue['user']; ?>"><?php echo $issue['user']; ?></a></li>
