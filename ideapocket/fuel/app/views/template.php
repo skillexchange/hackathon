@@ -28,7 +28,7 @@
 <?php if(isset($error) && $error) { ?>
                 <div class="alert alert-error">タイトルと具体的な課題の内容を入力してください。</div>
 <?php } ?>
-                <?php echo Html::anchor('issue/create', 'Add new Issue', array('class' => 'btn success')); ?>
+                <?php echo Html::anchor('issue/create', '課題を投稿する', array('class' => 'btn success')); ?>
             </div>
             
             <?php  echo $rank; ?>

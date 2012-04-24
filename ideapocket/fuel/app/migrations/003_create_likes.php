@@ -8,8 +8,8 @@ class Create_likes
 	{
 		\DBUtil::create_table('likes', array(
 			'id'            => array('type' => 'int', 'constraint' => 11, 'auto_increment' => true),
-			'issue_id'      => array('type' => 'int', 'constraint' => 11),
-			'solution_id'   => array('type' => 'int', 'constraint' => 11),
+			'issue_id'      => array('type' => 'int', 'constraint' => 11, 'null' => true),
+			'solution_id'   => array('type' => 'int', 'constraint' => 11, 'null' => true),
 			'user'          => array('type' => 'varchar', 'constraint' => 24),
 			'deleted'       => array('type' => 'int', 'constraint' => 1),
 			'created_at'    => array('type' => 'datetime'),

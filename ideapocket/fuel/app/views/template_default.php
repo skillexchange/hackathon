@@ -33,7 +33,6 @@
         <div id="main" class="span8">
             <?php echo $content ?>
         </div>
-
     </div>
     
     <footer>

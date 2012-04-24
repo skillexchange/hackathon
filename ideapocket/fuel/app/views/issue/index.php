@@ -12,7 +12,7 @@
     
     <ul class="info">
         <li><i class="icon-user"></i> <a href="/user/<?php echo $issue['user']; ?>"><?php echo $issue['user']; ?></a></li>
-        <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/like" class="like">いいね！</a></li>
+        <li><i class="icon-star"></i> <a href="#" class="like">いいね！</a></li>
         <li><i class="icon-inbox"></i> <a href="/issue/<?php echo $issue['id']; ?>#solution-form">課題の解決方法を投稿</a></li>
         <li><i class="icon-info-sign"></i> <a href="/issue/<?php echo $issue['id']; ?>">詳しくみる</a></li>
     </ul>
@@ -28,7 +28,7 @@
             <span class="count-mini">★ <?php echo count($solution['likes']); ?></span>
             <ul class="info">
                 <li><i class="icon-user"></i> <a href="/user/<?php echo $solution['user']; ?>"><?php echo $solution['user']; ?></a></li>
-                <li><i class="icon-star"></i> <a href="/issue/<?php echo $issue['id']; ?>/solution/<?php echo $solution['id']; ?>/like">いいね！</a></li>
+                <li><i class="icon-star"></i> <a href="#">いいね！</a></li>
                 <li><i class="icon-info-sign"></i> <?php echo Html::anchor('issue/view/'.$issue->id.'#solution'.$solution->id , '詳しくみる'); ?></li>
             </ul>
         </div>
